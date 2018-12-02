@@ -2,6 +2,6 @@
 
 Presentation in labled folder 
 
-attempts in c labled by attempt -
-	attempt 	= x.c 
-	compiled file 	= testx
+attempts in c labled by attempt -  
+        attempt 	= x.c      
+        compiled file 	= testx  
