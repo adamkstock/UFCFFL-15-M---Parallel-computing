@@ -85,8 +85,7 @@ int main (void)
     int i1, i2, i3, i4, i5, i6;
     char testkey [17] = "#####000000#####";
     char work [17+cbs];
-    int idstart = 2 * omp_get_thread_num();
-    for (i1 = idstart;i1 <= 9; i1++)
+    for (i1 = 9;i1 <= 9; i1++)
     {
       testkey[5] = i1 + '0' ;
       for (i2 = 0;i2 <= 9; i2++)
