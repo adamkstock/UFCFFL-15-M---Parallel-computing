@@ -64,7 +64,7 @@ int main (void)
 
   int cbs = EVP_CIPHER_block_size(EVP_aes_128_cbc());
 
-  char truekey [17] = "#####500999#####";
+  char truekey [17] = "#####747065#####";
   char originaltxt [17] = "thisisatestxxxxx";
   char encryptedtxt [17+cbs];
 
@@ -86,7 +86,7 @@ int main (void)
     char testkey [17] = "#####000000#####";
     char work [17+cbs];
     int idstart = 2 * omp_get_thread_num();
-    for (i1 = idstart;i1 <= 9; i1++)
+    for (i1 = idstart;i1 <= idstart +1; i1++)
     {
       testkey[5] = i1 + '0' ;
       for (i2 = 0;i2 <= 9; i2++)
