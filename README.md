@@ -21,7 +21,7 @@
 
         file 2.c compiles with -   
                 - gcc 2.c -o test2
-        this file can be compild without switches
+        this file can be compiled without switches
 
         files 10 and higher compile with -
                 - mpicc -g (source).c -o (compiled file) -fopenmp -lcrypto
