@@ -79,6 +79,7 @@ int main (int argc, char* argv[])
 
   time1 = omp_get_wtime();
 
+    printf ("Mpi is about to begin - gpoing full multi !\n\n");
 
     MPI_Init (&argc, &argv);      /* starts MPI */
     // MPI_Init (NULL, NULL);      /* starts MPI */
