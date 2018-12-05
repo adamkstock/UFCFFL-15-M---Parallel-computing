@@ -1,16 +1,19 @@
 # UFCFFL-15-M---Parallel-computing
 
-##Presentation in labled folder 
+## Presentation in labled folder 
 
-###attempts in c labled by attempt -  
+### attempts in c labled by attempt -
+  
         source 		= x.c  	    
         compiled file 	= testx  
 
-###completed versions labled as -
+### completed versions labled as -
+
         source 		= x-xfinal.c
         compiled file	= completex-x
 
-###compilation - 
+### compilation -
+ 
         files labled 1 and 3-9 compile using -
 		- gcc (source).c -o (compiled file)  -lcrypto
 		- example 'gcc 8-5thread.c -o test8-5  -lcrypto'
