@@ -28,7 +28,7 @@
         these files require the open mpi wrapper, this is a small shell script that       
         invokes gcc with the relevent arguements for mpi compilation
 
-        please note much of this comilation can be performed using the included makefile using 'make'
+        please note much of this compilation can be performed using the included makefile using 'make'
 
 ### execution - 
 
