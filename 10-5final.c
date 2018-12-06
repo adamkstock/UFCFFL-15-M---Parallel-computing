@@ -65,7 +65,7 @@ int main (int argc, char* argv[])
 
   int cbs = EVP_CIPHER_block_size(EVP_aes_128_cbc());
 
-  char truekey [17] = "#####999999#####";
+  char truekey [17] = "#####747065#####";
   char originaltxt [17] = "thisisatestxxxxx";
   char encryptedtxt [17+cbs];
 

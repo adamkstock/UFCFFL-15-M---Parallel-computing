@@ -28,6 +28,8 @@
         these files require the open mpi wrapper, this is a small shell script that       
         invokes gcc with the relevent arguements for mpi compilation
 
+        please note much of this comilation can be performed using the included makefile using 'make'
+
 ### execution - 
 
         files 1-9 can be run using -
@@ -36,6 +38,9 @@
         files 10 and higher require -  
                 - mpirun -np (number of threads) ./(compiled file)
 
-        make and shell script files can be run using - 
+        shell script files can be run using - 
                 - ./(filename).(extension if required)
+
+        make is run using - 
+                - make
 
