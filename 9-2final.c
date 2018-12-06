@@ -72,11 +72,11 @@ int main (void)
   bool hit = false;
   double timer;
 
-  encrypt (originaltxt, strlen (originaltxt), truekey, iv,  encryptedtxt);
+  encrypt (originaltxt, strlen (originaltxt), truekey, iv,  encryptedtxt);//first encryption here 
 
   double time1, time2;
 
-  time1 = omp_get_wtime();
+  time1 = omp_get_wtime();//timer starts here 
 
   omp_set_num_threads(NUM_THREADS);
 
@@ -103,9 +103,9 @@ int main (void)
               testkey[9] = i5 + '0' ;
               for (i6 = 0;i6 <= 9; i6++)
               {
-                testkey[10] = i6 + '0' ;
+                testkey[10] = i6 + '0' ;//key generated here 
 
-                encrypt (originaltxt, strlen ((char*)originaltxt), testkey, iv,  work);
+                encrypt (originaltxt, strlen ((char*)originaltxt), testkey, iv,  work);//second encryption for comparison here 
 
                 ret = strncmp(work, encryptedtxt, 16);
 
@@ -114,7 +114,7 @@ int main (void)
                   if (hit == false)
                   {
                     hit = true ;
-                    time2 = omp_get_wtime();
+                    time2 = omp_get_wtime();//timer stopped here 
                     timer = (double)(time2 - time1);
                     int id = omp_get_thread_num();
                     printf ("[---------------------------------]\n\n");

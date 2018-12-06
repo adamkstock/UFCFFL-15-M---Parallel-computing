@@ -70,11 +70,11 @@ int main (void)
   bool hit = false;
   double timer;
 
-  encrypt (originaltxt, strlen (originaltxt), truekey, iv,  encryptedtxt);
+  encrypt (originaltxt, strlen (originaltxt), truekey, iv,  encryptedtxt);//initial encryption here 
 
   clock_t time1, time2;
 
-  time1 = clock();
+  time1 = clock();// timer started here 
 
 
 
@@ -99,9 +99,9 @@ int main (void)
               testkey[9] = i5 + '0' ;
               for (i6 = 0;i6 <= 9; i6++)
               {
-                testkey[10] = i6 + '0' ;
+                testkey[10] = i6 + '0' ;//key generated here 
 
-                encrypt (originaltxt, strlen ((char*)originaltxt), testkey, iv,  work);
+                encrypt (originaltxt, strlen ((char*)originaltxt), testkey, iv,  work);//second encryption here for comparison 
 
                 ret = strncmp(work, encryptedtxt, 16);
 
@@ -110,7 +110,7 @@ int main (void)
                   if (hit == false)
                   {
                     hit = true ;
-                    time2 = clock();
+                    time2 = clock();//timer stopped here 
                     timer = time2 - time1;
                     printf ("[---------------------------------]\n\n");
                     printf ("Match found\n\n");

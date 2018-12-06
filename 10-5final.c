@@ -73,7 +73,7 @@ int main (int argc, char* argv[])
   bool hit = false;
   double timer;
 
-  encrypt (originaltxt, strlen (originaltxt), truekey, iv,  encryptedtxt);
+  encrypt (originaltxt, strlen (originaltxt), truekey, iv,  encryptedtxt);//initial encryption here 
 
   double time1, time2;
 
@@ -81,7 +81,7 @@ int main (int argc, char* argv[])
 
 
     MPI_Init (&argc, &argv);      /* starts MPI */
-    // MPI_Init (NULL, NULL);      /* starts MPI */
+
     int threadno;
     MPI_Comm_rank (MPI_COMM_WORLD, &threadno);        /* get current process id */
     int i1, i2, i3, i4, i5, i6;
@@ -106,19 +106,19 @@ int main (int argc, char* argv[])
               testkey[9] = i5 + '0' ;
               for (i6 = 0;i6 <= 9; i6++)
               {
-                testkey[10] = i6 + '0' ;
+                testkey[10] = i6 + '0' ;//key generated here 
 
-                encrypt (originaltxt, strlen ((char*)originaltxt), testkey, iv,  work);
+                encrypt (originaltxt, strlen ((char*)originaltxt), testkey, iv,  work);//second encryption here for comparison 
 
                 ret = strncmp(work, encryptedtxt, 16);
-                //printf("ret: %d key : %s\n", ret, testkey);
+
 
                 if (ret == 0)
                 {
                   if (hit == false)
                   {
                     hit = true ;
-                    time2 = omp_get_wtime();
+                    time2 = omp_get_wtime();// timer stopped here 
                     timer = (double)(time2 - time1);
                     printf ("[---------------------------------]\n\n");
                     printf ("Match found\n\n");
